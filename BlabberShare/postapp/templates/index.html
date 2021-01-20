@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BlabberShare | Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="BlabberShare">
+	<meta name="keywords" content="posting, chat, social media, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="{% url 'index' %}" class="site-logo">
+			<div style="display:flex; margin-top: 20px;">
+				<img src="{% static 'img/company_logo.jpg' %}" height="100px" width="110px" style="position: relative; bottom: 11px;"alt="company logo">
+	      <h1><b style="color:#ff3300;">blabber</b><b style="color:white;">share</b></h1>
+			</div>
+		</a>
+		<div class="header-right">
+			<div class="user-panel">
+				<a href="" class="login">Login</a>
+				<span>|</span>
+				<a href="" class="register">Create an account</a>
+				<br>
+				<ul class="main-menu">
+					<li><a href="{% url 'index' %}">Home</a></li>
+					<li><a href="{% url 'soon' %}">About</a></li>
+					<li><a href="{% url 'soon' %}">Blog</a></li>
+					<li><a href="{% url 'soon' %}">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+	<!-- Main section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2><span>Community</span> for everyone.</h2>
+								<p>A platform to share whatever moves you. Share to a community full of amazing people with amazing things to share to the world. </p>
+								<a href="#" class="site-btn">Login</a>
+								<a href="#" class="site-btn sb-c2">Register</a>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hr-img">
+								<img src="{% static 'img/online-worlds.png' %}" alt="picture">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2><span>Stories </span> that keep you moving.</h2>
+								<p>Let's build a community full of amazing people to share whatever crosses our minds. Let's build relations that matter the most by sharing the content. Share now! </p>
+								<a href="#" class="site-btn">Login</a>
+								<a href="#" class="site-btn sb-c2">Register</a>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hr-img">
+								<img src="{% static 'img/online-worlds.png' %}" alt="picture">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Main section end -->
+
+	<!-- How section -->
+	<section class="how-section spad set-bg">
+		<div class="container text-blue">
+			<div class="section-title">
+				<h2>How it works</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="{% static 'img/icons/pointer.png' %}" alt="">
+						</div>
+						<h4>Create an account</h4>
+						<p>Be a part of this amazing community in few simple steps! Just click on the Register button above and unlock the best shared contents on the web. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="{% static 'img/icons/smartphone.png' %}" alt="">
+						</div>
+						<h4>Enjoy the content</h4>
+						<p>Read the posts and contents shared by your peers in the community. Give them a pat on the back for good content and showcase your thoughts on that in the comments. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="{% static 'img/icons/brain.png' %}" alt="">
+						</div>
+						<h4>Share what's in your head</h4>
+						<p>Want to share something new with the community? Just click on the share button or follow the blog section and let see what you have in store! </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- How section end -->
+
+	<!-- Guidelines section -->
+	<section class="subscription-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="sub-text">
+						<h2><a id="guide">Guidelines</a></h2>
+						<h3>Know your Blabber.</h3>
+						<p>It is always good to know about some do's and don'ts. While you are all welcome to be a part of the community, we encourage some good practices and condemn some as well. We also list some features of BlabberShare here. </p>
+						<a href="{% url 'index' %}" class="site-btn">Dive in</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="sub-list">
+						<li><img src="{% static 'img/icons/tick.png' %}" alt="">Share memes, pics and more</li>
+						<li><img src="{% static 'img/icons/tick.png' %}" alt="">Write blogs</li>
+						<li><img src="{% static 'img/icons/tick.png' %}" alt="">Share experiences and joy</li>
+						<li><img src="{% static 'img/icons/tick.png' %}" alt="">Appreciate through comments</li>
+						<li><img src="{% static 'img/icons/untick.png' %}" alt="">No profanity</li>
+						<li><img src="{% static 'img/icons/untick.png' %}" alt="">No gender or racial abuses</li>
+						<li><img src="{% static 'img/icons/untick.png' %}" alt="">Stay away from sharing your personal <span style="padding: 0 0 0 55px;">information with the community</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Guidelines section end -->
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-7 order-lg-2">
+					<div class="row">
+						<div class="col-sm-4">
+		<!-- Add a div if you want to add a column -->
+						</div>
+						<div class="col-sm-4">
+							<div class="footer-widget">
+								<h2>About Us</h2>
+								<ul>
+									<li><a href="">Our Story</a></li>
+									<li><a href="">Founder</a></li>
+									<li><a href="#guide">Guidelines</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="footer-widget">
+								<h2>Contact</h2>
+								<ul>
+									<li><a href="">Developer Contact</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-5 order-lg-1">
+					<div class="copyright">
+						<div style="display:flex; ; text-transform: lowercase;">
+							<img src="{% static 'img/company_logo.jpg' %}" height="70px" width="90px" style="position: relative; bottom: 15px;"alt="company logo">
+				      <h3><b style="color:#ff3300;">blabber</b><b style="color:white;">share</b></h3>
+						</div>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true" style="color:red;"></i> by <a href="#" >Kartikey V Hebbar</a></div>
+					<!-- <div class="social-links">
+						<a href=""><i class="fa fa-instagram"></i></a>
+						<a href=""><i class="fa fa-pinterest"></i></a>
+						<a href=""><i class="fa fa-facebook"></i></a>
+						<a href=""><i class="fa fa-twitter"></i></a>
+						<a href=""><i class="fa fa-youtube"></i></a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+  <script type="text/javascript" src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/jquery.slicknav.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/owl.carousel.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/mixitup.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/main.js' %}"></script>
+	</body>
+</html>
+
+<!-- 338 -->

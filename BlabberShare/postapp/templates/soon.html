@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BlabberShare | Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="BlabberShare">
+	<meta name="keywords" content="posting, chat, social media, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+
+</head>
+<body style="background-color: #0a183d;">
+    <!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="{% url 'index' %}" class="site-logo">
+			<div style="display:flex; margin-top: 20px;">
+				<img src="{% static 'img/company_logo.jpg' %}" height="100px" width="110px" style="position: relative; bottom: 11px;"alt="company logo">
+	      <h1><b style="color:#ff3300;">blabber</b><b style="color:white;">share</b></h1>
+			</div>
+		</a>
+		<div class="header-right">
+			<div class="user-panel">
+				<a href="" class="login">Login</a>
+				<span>|</span>
+				<a href="" class="register">Create an account</a>
+				<br>
+				<ul class="main-menu">
+					<li><a href="{% url 'index' %}">Home</a></li>
+					<li><a href="{% url 'soon' %}">About</a></li>
+					<li><a href="{% url 'soon' %}">Blog</a></li>
+					<li><a href="{% url 'soon' %}">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+    <div style="padding-top:10%;"><h1 style="text-align: center; color: beige; font-size: x-large; font-size: 90px; font-weight: 200;">Coming Soon!!</h1></div>
+</body>
+</html>
