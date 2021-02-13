@@ -1,0 +1,58 @@
+body {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  background-color: #eee;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.title {
+  text-align: center;
+  position:relative;
+  color: #FF6347;
+  font-family: "Lucida Console", Monaco, monospace;
+  display: block;
+  font-size: 50px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: inherit;
+    color: #fff;
+    background-color: #1E90FF;
+    margin: 5px;
+}
+
+
+footer {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    background-color: #333333;
+    bottom: 0;
+}
+
+p.copyright {
+    font-family: serif;
+    position: relative;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.8em;
+    text-align: center;
+
+}

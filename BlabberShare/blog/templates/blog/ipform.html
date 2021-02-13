@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New Blog Post | Post Random</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="{% static 'blog/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" href="{% static 'blog/ipformstyles.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" method="POST" action="{% url 'ipform' %}">
+        {% csrf_token %}
+        <h4 class="form-signin-heading">Post something new here</h4>
+        <div class="form-group">
+          <label for="inputName" class="sr-only">Blog Title</label>
+          {{form.posttitle}}
+        </div>
+        <div class="form-group">
+          <label for="id" class="sr-only">Your thoughts here.</label>
+            {{form.postdesc}}
+        </div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Post</button>
+      </form>
+
+    </div> <!-- /container -->
+    <footer>
+      <div class="footer">
+        <p class="copyright">Developed by <em>Kartikey V Hebbar</em></p>
+      </div>
+    </footer>
+
+
+  </body>
+</html>

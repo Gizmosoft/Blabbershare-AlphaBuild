@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BlabberShare | Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'blog/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blog/theme.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="title">
+        <h1>BLABBERSHARE BLOG</h1><br>
+        <h6>A blog for the people</h6>
+      </div>
+      <div class="">
+        <a type="button" class="button" href="{% url 'ipform' %}">Post Something</a>
+      </div>
+
+      {% for b in blogs %}
+      <div class="page-header">
+        <h1>{{b.posttitle}}</h1>
+      </div>
+      <div class="well">
+        <p>{{b.postdesc}}</p>
+      </div>
+      {% endfor %}
+      </div>
+
+<!--<div class="page-header">
+        {% for b in blogs %}
+        <h1>{{b.posttitle}}</h1>
+      </div>
+      <div class="well">
+        <p>{{b.postdesc}}</p>
+        {% endfor %}
+      </div>-->
+     <!-- /container -->
+
+    <footer>
+      <div class="footer">
+        <p class="copyright">Developed by <em>Kartikey V Hebbar</em></p>
+      </div>
+    </footer>
+
+  </body>
+</html>
