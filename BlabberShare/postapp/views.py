@@ -7,9 +7,9 @@ from .models import Post
 # import timeago, datetime
 
 # Create your views here.
-def index(request):
-    return render(request, "index.html")
-
+# def index(request):
+#     return render(request, "index.html")
+#
 def soon(request):
     return render(request, "soon.html")
 

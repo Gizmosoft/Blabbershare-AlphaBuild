@@ -3,10 +3,10 @@ from .models import blogPost
 from .forms import PostForm
 
 # Create your views here.
-def index(request):
+def blogIndex(request):
     blogs = blogPost.objects.order_by("-date_added")
     context = {'blogs' : blogs}
-    return render(request,'blog/index.html', context)
+    return render(request,'blog/blogIndex.html', context)
 
 def ipform(request):
     if request.method == 'POST':
@@ -17,9 +17,9 @@ def ipform(request):
             postdesc = request.POST['postdesc'])
 
             new_req.save()
-            return redirect('index')
+            return redirect('blogIndex')
 
-    else: 
+    else:
         form = PostForm()
 
         context = {'form' : form}

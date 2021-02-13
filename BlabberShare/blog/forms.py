@@ -4,8 +4,8 @@ class PostForm(forms.Form):
     posttitle = forms.CharField(max_length = 30,
     widget = forms.TextInput(attrs = {
     'class': 'form-control',
-    'placeholder' : 'Name',
-    'id' : 'inputName',
+    'placeholder' : 'Your Post Title',
+    'id' : 'inputTitle',
     }))
 
     postdesc = forms.CharField(widget = forms.Textarea({
