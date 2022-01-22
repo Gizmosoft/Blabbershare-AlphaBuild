@@ -41,9 +41,14 @@
 		</a>
 		<div class="header-right">
 			<div class="user-panel">
-				<a href="" class="login">Login</a>
-				<span>|</span>
-				<a href="" class="register">Create an account</a>
+				{% if user.is_authenticated %}
+					<a href="{% url 'dashboard' %}" class="dashboard">Dashboard</a>
+					<a href="{% url 'logout' %}" class="register">Logout</a>
+				{% else %}
+					<a href="{% url 'login' %}" class="login">Login</a>
+					<span>|</span>
+					<a href="{% url 'register' %}" class="register">Create an account</a>
+				{% endif %}
 				<br>
 				<ul class="main-menu">
 					<li><a href="{% url 'index' %}">Home</a></li>
@@ -56,6 +61,13 @@
 	</header>
 	<!-- Header section end -->
 
+	<!-- These messages provide info about various status in websites -->
+    {% if messages %}
+	    {% for message in messages %}
+	        <strong> {{ message }} </strong>
+	    {% endfor %}
+		{% endif %}
+
 	<!-- Main section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
@@ -66,8 +78,12 @@
 							<div class="hs-text">
 								<h2><span>Community</span> for everyone.</h2>
 								<p>A platform to share whatever moves you. Share to a community full of amazing people with amazing things to share to the world. </p>
-								<a href="#" class="site-btn">Login</a>
-								<a href="#" class="site-btn sb-c2">Register</a>
+								{% if user.is_authenticated %}
+									<a href="{% url 'dashboard' %}" class="site-btn">Dashboard</a>
+								{% else %}
+									<a href="{% url 'login' %}" class="site-btn">Login</a>
+									<a href="{% url 'register' %}" class="site-btn sb-c2">Register</a>
+								{% endif %}
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -85,8 +101,12 @@
 							<div class="hs-text">
 								<h2><span>Stories </span> that keep you moving.</h2>
 								<p>Let's build a community full of amazing people to share whatever crosses our minds. Let's build relations that matter the most by sharing the content. Share now! </p>
-								<a href="#" class="site-btn">Login</a>
-								<a href="#" class="site-btn sb-c2">Register</a>
+								{% if user.is_authenticated %}
+									<a href="{% url 'dashboard' %}" class="site-btn">Dashboard</a>
+								{% else %}
+									<a href="{% url 'login' %}" class="site-btn">Login</a>
+									<a href="{% url 'register' %}" class="site-btn sb-c2">Register</a>
+								{% endif %}
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -149,7 +169,11 @@
 						<h2><a id="guide">Guidelines</a></h2>
 						<h3>Know your Blabber.</h3>
 						<p>It is always good to know about some do's and don'ts. While you are all welcome to be a part of the community, we encourage some good practices and condemn some as well. We also list some features of BlabberShare here. </p>
-						<a href="{% url 'index' %}" class="site-btn">Dive in</a>
+						{% if user.is_authenticated %}
+							<a href="{% url 'dashboard' %}" class="site-btn">Dive in</a>
+						{% else %}
+							<a href="{% url 'login' %}" class="site-btn">Dive in</a>
+						{% endif %}
 					</div>
 				</div>
 				<div class="col-lg-6">

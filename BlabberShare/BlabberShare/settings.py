@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'postapp',
     'blog',
     'homeapp',
+    'authentication',
 
     'django.contrib.sites',
     'allauth',
@@ -194,7 +195,7 @@ MEDIA_URL = '/media/'
 ### ADMIN CREDENTIALS ###
 '''
     USERNAME : admin-bs
-    PASSWORD : ADMIN
+    PASSWORD : admin
 
     POSTGRESQL USERNAME: postgres
     DATABASE NAME      : Blabbershare
