@@ -17,6 +17,12 @@ def dashboard(request):
     posts  = Post.objects.all().order_by('-date_time')
     return render(request, "dashboard.html",{'posts':posts})
 
+# def blogpost(request, id):
+#     post = Post.objects.filter(post_id=id)[0]
+#     print(post)
+#     return render(request, "dashboard.html")
+
+
 
 '''
     then   = posts.date_time.datetime()

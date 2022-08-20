@@ -9,8 +9,9 @@ from django.utils import timezone
 # Create your models here.
 
 class Post(models.Model):
-    post        = models.TextField()
+    post_id     = models.AutoField(primary_key=True)
+    post        = models.TextField(max_length=20000)
     image       = models.ImageField(upload_to='images', blank=True)
     hashtags    = models.TextField(blank=True)
     date_time   = models.DateTimeField(default=timezone.now)
-    
+

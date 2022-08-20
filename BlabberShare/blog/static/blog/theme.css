@@ -27,6 +27,7 @@ body {
   font-size: 50px;
 }
 
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -39,20 +40,6 @@ a.button {
 }
 
 
-footer {
-    position: fixed;
-    height: 30px;
-    width: 100%;
-    background-color: #333333;
-    bottom: 0;
-}
-
-p.copyright {
-    font-family: serif;
-    position: relative;
-    color: #fff;
-    line-height: 40px;
-    font-size: 0.8em;
-    text-align: center;
-
+.post-bracket {
+  margin-right: 10px;
 }

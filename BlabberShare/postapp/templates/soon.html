@@ -35,16 +35,25 @@
 		</a>
 		<div class="header-right">
 			<div class="user-panel">
-				<a href="" class="login">Login</a>
-				<span>|</span>
-				<a href="" class="register">Create an account</a>
-				<br>
-				<ul class="main-menu">
-					<li><a href="{% url 'index' %}">Home</a></li>
-					<li><a href="{% url 'soon' %}">About</a></li>
-					<li><a href="{% url 'soon' %}">Blog</a></li>
-					<li><a href="{% url 'soon' %}">Contact</a></li>
-				</ul>
+				{% if user.is_authenticated %}
+					<ul class="main-menu">
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'soon' %}">About</a></li>
+						<li><a href="{% url 'blogIndex' %}">Blog</a></li>
+						<li><a href="{% url 'soon' %}">Contact</a></li>
+					</ul>
+				{% else %}
+					<a href="" class="login">Login</a>
+					<span>|</span>
+					<a href="" class="register">Create an account</a>
+					<br>
+					<ul class="main-menu">
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'soon' %}">About</a></li>
+						<li><a href="{% url 'soon' %}">Blog</a></li>
+						<li><a href="{% url 'soon' %}">Contact</a></li>
+					</ul>
+				{% endif %}
 			</div>
 		</div>
 	</header>
