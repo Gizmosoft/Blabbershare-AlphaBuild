@@ -1,10 +1,5 @@
 # Blabbershare-AlphaBuild
 
+A simple blog made using Django Framework of Python and PostgreSQL database on the server-side along with HTML/CSS and Bootstrap framework on the client-side. This blog allows users to authenticate against credentials and post random blogs and pictures.
 
-*This is a doc to remind myself of how much I have worked on this Project
-
-Current development:
-
-  -- Home Page, fully designed -- Integrated with HomeApp
-  -- PostApp - consists of user profile, user feed (dashboard) --- under development/not functional, no button/links yet -- this will be linked to the dashboard page
-  -- blog - integration of an old blog template - all old functionality and styles fully functional - need Style revamp wrt new template(of home page), add links from dashboard to blog, new features yet to be added in blog - done
+It makes use of basic CRUD (Create, Retrieve, Update and Delete) operations.
